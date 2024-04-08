@@ -52,8 +52,6 @@ model User {
   assignedTasks   Task[]        @relation("AssignedToRelation")
   createdTasks    Task[]        @relation("CreatedByRelation")
   sentInvitations Invitation[]  @relation("UserToInvitation")
-  Organization    Organization? @relation(fields: [organizationId], references: [id])
-  organizationId  String?
 }
 
 model VerificationToken {
@@ -81,19 +79,17 @@ model BoardMember {
 }
 
 model Board {
-  id             String        @id @default(cuid())
-  title          String
-  backgroundUrl  String?
-  columns        Column[]
-  labels         Label[]
-  createdAt      DateTime      @default(now())
-  updatedAt      DateTime      @updatedAt
-  activities     Activity[]
-  favoritedBy    User[]        @relation("favorites")
-  members        BoardMember[]
-  invitations    Invitation[]
-  Organization   Organization? @relation(fields: [organizationId], references: [id])
-  organizationId String?
+  id            String        @id @default(cuid())
+  title         String
+  backgroundUrl String?
+  columns       Column[]
+  labels        Label[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  activities    Activity[]
+  favoritedBy   User[]        @relation("favorites")
+  members       BoardMember[]
+  invitations   Invitation[]
 }
 
 model Column {
@@ -225,14 +221,4 @@ model Product {
   updatedAt DateTime @updatedAt
   brand     Brand    @relation(fields: [brandId], references: [id])
   brandId   Int
-}
-
-model Organization {
-  id        String   @id @default(cuid())
-  title     String
-  image     String
-  userIds   String[]
-  boards    Board[]
-  createdAt DateTime @default(now())
-  User      User[]
 }
