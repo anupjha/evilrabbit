@@ -5,15 +5,15 @@
 /* Hide Scrollbars */
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
-      display: none;
+    display: none;
   }
 
   .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
-.sub-menu .menu-item{
+.sub-menu .menu-item {
   background-color: #f4f4f5;
 }

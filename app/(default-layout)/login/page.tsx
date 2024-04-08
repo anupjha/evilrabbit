@@ -19,7 +19,7 @@ export default async function CustomSignInPage() {
           </CardHeader>
           <CardBody className="space-y-3 p-10 pt-0">
             <p className="uppercase text-xs text-center text-primary">- OAuth- </p>
-            <SignInGithub />
+            {/* <SignInGithub /> */}
             <SignInGoogle />
           </CardBody>
         </Card>
