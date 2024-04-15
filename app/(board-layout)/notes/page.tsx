@@ -8,7 +8,7 @@ export default function Notes() {
   return (
     <main className="flex flex-col grow min-w-0 p-5 bg-zinc-200">
       <PageHeading title="Notes" />
-      <div className="w-full min-h-[400px]">
+      <div className="w-full min-h-dvh">
         <Suspense fallback={<p>Loading...</p>}>
           <TextEditor />
         </Suspense>
