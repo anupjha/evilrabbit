@@ -6,7 +6,8 @@ export default function SidebarMenu({ boards }: { boards: BoardSummarySidebar[] 
   return (
     <Sidebar>
       <Menu>
-        <SubMenu title="Team" defaultOpen icon={<IconLayoutKanban size={18} />}>
+        <MenuItem path="/board" title="Team" icon={<IconLayoutKanban size={18} />} />
+        {/* <SubMenu title="Team" defaultOpen icon={<IconLayoutKanban size={18} />}>
           <MenuItem path="/board" title="New" icon={<IconPencilBolt size={18} />} />
           {boards.map((boardMember) => (
             <MenuItem
@@ -15,10 +16,11 @@ export default function SidebarMenu({ boards }: { boards: BoardSummarySidebar[] 
               title={boardMember.board.title}
             />
           ))}
-        </SubMenu>
+        </SubMenu> */}
         <MenuItem path="/calendar" title="Calendar" icon={<IconCalendar size={18} />} />
-        <SubMenu title="Setting" defaultOpen icon={<IconTools size={18} />}>
-          <MenuItem path="/products" title="Users" />
+        <SubMenu title="Experimental" defaultOpen icon={<IconTools size={18} />}>
+          {/* <MenuItem path="/products" title="Users" /> */}
+          <MenuItem path="/notes" title="Notes" />
         </SubMenu>
       </Menu>
     </Sidebar>

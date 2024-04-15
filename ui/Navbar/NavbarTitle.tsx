@@ -6,7 +6,7 @@ export default function NavbarTitle() {
   return (
     <div className="flex items-center my-2 gap-5">
       <h4 className="flex items-center text-lg gap-3 font-semibold tracking-tight">
-        <IconLayoutKanban className="text-purple-500" /> Evil Rabbit
+        <Image src="/favicon.png" width={32} height={32} alt="Picture of the author" /> Evil Rabbit
       </h4>
     </div>
   );

@@ -111,6 +111,7 @@ model Task {
   id              String      @id @default(cuid())
   title           String
   description     String?
+  document        Json?
   dueDate         DateTime?
   startDate       DateTime?
   columnId        String
